@@ -1,0 +1,1181 @@
+<div class="container">
+  <mat-card class="p-10">
+    <div class="main-heading">
+      <h2>Patients Visits</h2>
+      <button mat-flat-button color="accent" class="btn-height">
+        <a routerLink="/patient-visits-ktp" routerLinkActive="active">Back To Visits</a>
+      </button>
+    </div>
+
+    <div class="main-table">
+      <table class="grid-table">
+        <thead>
+          <tr>
+            <th>Visit Number</th>
+            <th>MR Number</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Visit At</th>
+            <th>OPD</th>
+            <th>Doctor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr *ngIf="selectedData">
+            <td>{{ selectedData.visitnum }}</td>
+            <td>{{ selectedData.regnum }}</td>
+            <td>{{ selectedData.patientname }}</td>
+            <td>{{selectedData.pattype}}</td>
+            <td>{{selectedData.gender}}</td>
+            <td>{{selectedData.age}}</td>
+            <td>{{selectedData.visitdate}}</td>
+            <td>{{selectedData.docopdcode}}</td>
+            <td>{{selectedData.docopdname}}</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </mat-card>
+</div>
+<!-- here is clinical history -->
+<div class="mt-5 container">
+  <mat-card class="p-10">
+    <div class="clinical-heading">
+      <mat-card-title class="card-title">Clinical History</mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="outline" class="clinical-main-input">
+          <mat-label>Reason for requiring Transplantation (mention specific disease)</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>
+
+<div class="d-flex container">
+  <mat-card class="mr-5 mt-5 mb-5 width-50-percent">
+    <mat-card-subtitle class="card-subtitle">Medical History</mat-card-subtitle>
+    <mat-card-content>
+      <table class="clinical-table">
+        <tr>
+          <th>Co-morbidities (e.g. DM, HTN IHD Asthma, COAPD, Congenital anomalies etc.)</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense custom-form-field">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Past Medical history (Any significant ailments e.g. Tuberculosis)</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>Vaccination for Hepatitis B and Covid</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Past surgical History</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="ml-5 mt-5 mb-5 width-50-percent">
+    <mat-card-subtitle class="card-subtitle">Drug History</mat-card-subtitle>
+    <mat-card-content>
+      <table class="clinical-table">
+        <tr>
+          <th>Current Medication (carvedalol,diuretics)</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense custom-form-field">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Allergy to drugs</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Past Medication</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Alcohol (Last used)</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>Drugs</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>Smoking</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- specific clinical history -->
+
+<div class="container">
+  <mat-card class="mt-5 mb-5">
+    <mat-card-title class="card-title">Specific Clinical History</mat-card-title>
+    <mat-card-content>
+      <table class="specific-clinical-table">
+        <thead>
+          <tr>
+            <th>Ascites</th>
+            <th>PSE</th>
+            <th>SBP</th>
+            <th>Jaundice</th>
+            <th>H/O Upper GI Bleeding</th>
+            <th>HRS</th>
+            <th>HCC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <mat-form-field appearance="outline" class="specific-mat-form-field field-dense">
+                <input type="text" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="specific-mat-form-field field-dense">
+                <input type="text" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="specific-mat-form-field field-dense">
+                <input type="text" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="specific-mat-form-field field-dense">
+                <input type="text" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="specific-mat-form-field field-dense">
+                <input type="text" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="specific-mat-form-field field-dense">
+                <input type="text" matInput>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="specific-mat-form-field field-dense">
+                <input type="text" matInput>
+              </mat-form-field>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- NUTRITIONAL STATUS -->
+<div class="d-flex container justify-space-beteen">
+  <mat-card class="mr-5 mt-5 mb-5 width-50-percent">
+    <mat-card-subtitle class="card-subtitle">Nutritional Status</mat-card-subtitle>
+    <mat-card-content>
+      <table class="clinical-table">
+        <tr>
+          <th>Height</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense custom-form-field">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Weight</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>BMI</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Dietitian comments</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>ECOG status</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="ml-5 mt-5 mb-5 width-50-percent">
+    <mat-card-subtitle class="card-subtitle">Nutritional Status</mat-card-subtitle>
+    <mat-card-content>
+      <table class="clinical-table">
+        <tr>
+          <th>CHILD SCORE:</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense custom-form-field">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>CHILD CLASS:</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>MELD Na SCORE:</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<!-- LABORATORY INVESTIGATIONS -->
+<div class="labortory-investigations container">
+  <mat-card>
+    <mat-card-title>Labortary Investigations</mat-card-title>
+    <mat-card-content>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong> HEMATOLOGY</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of hematologyData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+      <!-- here is biochemistry section -->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>BIOCHEMISTRY</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of biochemistryData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+      <!-- here is VIRAL SEROLOGY section -->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>VIRAL SEROLOGY</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of viralSerologyData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <mat-card-subtitle class="card-subtitle" style="margin-top: 10px;">Tumor Makers</mat-card-subtitle>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of tumerMakersData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+      <!-- here is URINE ASSAY -->
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>URINE ASSAY</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of urineAssayData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <mat-card-subtitle class="card-subtitle" style="margin-top: 10px;">Urine Culture</mat-card-subtitle>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of urineCultureData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+      <!-- here is endocrine section -->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>ENDOCRINE</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of endocrineData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <mat-card-subtitle class="card-subtitle" style="margin-top: 10px;">Blood Culture</mat-card-subtitle>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of bloodcultureData">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+      <!-- //here is Ascitic fluid -->
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>ASCITIC FLUID ANALYSIS if required</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table class="lab-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Result</th>
+              <th>Normal Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let test of asciticFluid">
+              <th>{{ test.name }}</th>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.result">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field appearance="outline" class="field-dense">
+                  <input type="text" matInput [(ngModel)]="test.normalValue">
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save Lab Detail</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- here is radiology -->
+<div class="mt-5 container">
+  <mat-card class="p-10">
+    <div class="clinical-heading">
+      <mat-card-title class="card-title">Radiology</mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="outline" class="clinical-main-input">
+          <mat-label>Chest X-Ray</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>
+
+<div class="d-flex container">
+  <mat-card class="mr-5 mt-5 mb-5 width-50-percent">
+    <mat-card-subtitle class="card-subtitle">ULTRASOUND ABDOMEN & PELVIS + LIVER
+      DOPPLER ULTRASOUND
+    </mat-card-subtitle>
+    <mat-card-content>
+      <table class="clinical-table">
+        <tr>
+          <th>Portal vein patency</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense custom-form-field">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Focal lesion</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>Ascites </th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>other</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="ml-5 mt-5 mb-5 width-50-percent">
+    <mat-card-subtitle class="card-subtitle">CT-SCAN TRIPHASIC ABDOMEN</mat-card-subtitle>
+    <mat-card-content>
+      <table class="clinical-table">
+        <tr>
+          <th>Portal vein patency</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense custom-form-field">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Hepatorenal shunt</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Hepatic vein and IVC</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Distant metastasis</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>Ascites</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>HCC No. of lesion</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>HCC Size</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>HCC Segments</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <th>Angioinvasiveness</th>
+          <td>
+            <mat-form-field appearance="outline" class="field-dense">
+              <input type="text" matInput>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button class="btn" color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+     <!-- hepotologist function -->
+  
+     <div class="container d-flex">
+      <mat-card class=" mr-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">HEPATOLOGIST FUNCTION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Examinations</th>
+                <th>Recommendations</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class=" ml-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">PHYSICIAN EXAMINATION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Examinations</th>
+                <th>Recommendations</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="container d-flex">
+      <mat-card class=" mr-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">NEPHRO EXAMINATION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Examinations</th>
+                <th>Recommendations</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class=" ml-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">ENT EXAMINATION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Examinations</th>
+                <th>Recommendations</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="container d-flex">
+      <mat-card class=" mr-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">DENTAL EXAMINATION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Examinations</th>
+                <th>Recommendations</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class=" ml-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">EYE EXAMINATION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Examinations</th>
+                <th>Recommendations</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- another section of radiology -->
+    <div class="container d-flex">
+      <mat-card class=" mr-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">UPPER GI ENDOSCOPY</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Esophagus</th>
+                <th>Stomach</th>
+                <th>Duodenum</th>
+                <th>Band Ligation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class=" ml-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">CARDIAC FUNCTION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>ECG</th>
+                <th>Echocardiography / Bubble</th>
+                <th>Dobutamine Stress Echocardiography</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="container d-flex">
+      <mat-card class=" mr-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">PULMONARY FUNCTION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Pulmonary function tests</th>
+                <th>ABG’s</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class=" ml-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">GYNECOLOGICAL EXAMINATION (For Female)</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>PAP Smear</th>
+                <th>Examination</th>
+                <th>Current pathologies and past gynaecological procedures</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="fourcolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="container d-flex">
+      <mat-card class=" mr-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">Anesthesia Assessment of recipient</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Examinations</th>
+                <th>Recommendations</th>
+                <th>Fitness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="specific-mat-form-field-radiology field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class=" ml-5 mt-5 width-50-percent">
+        <mat-card-title class="card-title">EYE EXAMINATION</mat-card-title>
+        <mat-card-content>
+          <table class="radiology-table">
+            <thead>
+              <tr>
+                <th>Is the patient mentally healthy and prepared to undergo a liver transplant?</th>
+                <th>Has the patient been fully explained the risks associated with the procedure?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline" class="twocolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field appearance="outline" class="twocolumn-section field-dense">
+                    <input type="text" matInput>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+

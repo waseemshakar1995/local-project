@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .main{ 
+       display: flex;
+       justify-content: space-between;
+       padding: 10px;
+  }
+  .first {
+    width: 50%;
+    margin: 20px;
+  }
+  .second {
+    width: 50%;
+    text-align: end;
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  

@@ -1,0 +1,48 @@
+<header class="main-header">
+  <mat-toolbar color="accent">
+    <button mat-button class="email"><a routerLink="/patient-visits-ktp" routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true}">LTP</a></button>
+    <button mat-button class="email"><a routerLink="/academic" routerLinkActive="active">Academic</a></button>
+    <button mat-button class="email"><a routerLink="/fee-management" routerLinkActive="active">Fee Management</a></button>
+    <button mat-button class="email"><a routerLink="/time-table" routerLinkActive="active">Time Table</a></button>
+    <button mat-button class="email"><a routerLink="/class-activity" routerLinkActive="active">class activity</a></button>
+    <button mat-button class="email"><a routerLink="/admission" routerLinkActive="active">Admission</a></button>
+    <!-- <button mat-button class="email"><a routerLink="/hostel" routerLinkActive="active">Hostel</a></button> -->
+    <button mat-button class="email"><a routerLink="/registrar" routerLinkActive="active">Registrar</a></button>
+    <!-- <button mat-button class="email"><a routerLink="/report" routerLinkActive="active">Report</a></button> -->
+    <button mat-button class="email"><a routerLink="/setting" routerLinkActive="active">Setting</a></button>
+    <button mat-button class="email"><a routerLink="/security" routerLinkActive="active">Security</a></button>
+   <span class="email"></span>
+    <button mat-button [matMenuTriggerFor]="menu">{{Email}}</button>
+<mat-menu #menu="matMenu">
+  <!-- <button mat-menu-item (click)="isLoggingIn()"><a routerLink="/login" routerLinkActive="active">Login</a></button> -->
+  <button mat-menu-item>Profile</button>
+  <button mat-menu-item (click)="logout()">Logout</button>
+</mat-menu>
+<button mat-icon-button [matMenuTriggerFor]="list" aria-label="Example icon-button with a menu">
+  <mat-icon>notifications</mat-icon>
+</button>
+<mat-menu #list="matMenu">
+  <button mat-menu-item>
+    <mat-icon>person</mat-icon>
+    <span><a routerLink="/employees" routerLinkActive="active">Employees</a></span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>Auth</mat-icon>
+    <span><a routerLink="/authorization-page" routerLinkActive="active">Authorization</a></span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>school</mat-icon>
+    <span><a routerLink="/departments" routerLinkActive="active">Departments</a></span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>building</mat-icon>
+    <span><a routerLink="/projects" routerLinkActive="active">Projects</a></span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>info</mat-icon>
+    <span><a routerLink="/gazetted-holidays" routerLinkActive="active">Gazetted Holidays</a></span>
+  </button>
+</mat-menu>
+  </mat-toolbar>
+</header>

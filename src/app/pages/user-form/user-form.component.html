@@ -1,0 +1,64 @@
+<h2 mat-dialog-title>Student Data </h2>
+<mat-dialog-content class="mat-typography designing" >
+  <form class="example-form" [formGroup]="postForm">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>BTSON</mat-label>
+      <input matInput type="number" formControlName="no" class="form-control">
+    </mat-form-field>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>FirstName</mat-label>
+        <input matInput formControlName="fName" class="form-control" required>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lName" class="form-control" required>
+
+      </mat-form-field></td>
+    </tr></table>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>#Phone</mat-label>
+        <input matInput formControlName="phone" class="form-control" required>  
+    
+      </mat-form-field></td>
+
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" class="form-control" required>
+      </mat-form-field></td>
+    </tr>
+  </table>
+  
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St" formControlName="address" class="form-control" required></textarea>
+        <!-- <div *ngIf="!postForm.get('address')?.valid && postForm.get('address')?.touched">*required</div> -->
+      </mat-form-field>
+    
+  
+    <!-- <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="Ex. San Francisco">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Province</mat-label>
+        <input matInput placeholder="Ex. California">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Postal Code</mat-label>
+        <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field></td> -->
+    <!-- </tr></table> -->
+     <mat-dialog-actions align="end">
+    <button mat-stroked-button [mat-dialog-close]="true" color="warn">Cancel</button>
+     <button mat-flat-button [mat-dialog-close]="true" color="primary" (click)="post_student()">Save</button>
+    </mat-dialog-actions>
+    </form>
+</mat-dialog-content>
+

@@ -1,0 +1,99 @@
+<div class="container">
+    <mat-card class="form">
+      <mat-card-title class="title">LTP Patient Data Entry Form</mat-card-title>
+      <mat-card-content>
+  
+              <mat-form-field appearance="outline" class="regNo">
+                <mat-label class="label">Reg number</mat-label>
+                <input matInput type="text" name="mrNo" [(ngModel)]="mrNo">
+              </mat-form-field>
+            
+              <div class="flex">
+                <mat-form-field appearance="outline" class="regNo">
+                  <mat-label class="label">First Name</mat-label>
+                  <input matInput type="text" [(ngModel)]="firstName" name="first">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="regNo">
+                  <mat-label class="label">S/O</mat-label>
+                  <input matInput type="text" [(ngModel)]="so">
+                </mat-form-field>
+              </div>
+  
+              <div class="flex">
+                <mat-form-field appearance="outline" class="info">
+                  <mat-label class="label">Age</mat-label>
+                  <input matInput type="number" [(ngModel)]="age">
+                </mat-form-field>
+  
+                <mat-form-field appearance="outline" class="info">
+                  <mat-label class="label">Sex</mat-label>
+                  <mat-select [(ngModel)]="sex">
+                    <mat-option value="male">male</mat-option>
+                    <mat-option value="female">female</mat-option>
+                  </mat-select>
+                </mat-form-field>
+  
+                <mat-form-field appearance="outline" class="info">
+                  <mat-label class="label">Blood Group</mat-label>
+                  <mat-select [(ngModel)]="bloodgroup">
+                    <mat-option value="none">None</mat-option>
+                    <mat-option value="A+">A+</mat-option>
+                    <mat-option value="A-">A-</mat-option>
+                    <mat-option value="AB+">AB+</mat-option>
+                    <mat-option value="AB-">AB-</mat-option>
+                    <mat-option value="O+">O+</mat-option>
+                    <mat-option value="O-">O-</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+  
+              <div class="flex">
+                <mat-form-field appearance="outline" class="regNo">
+                  <mat-label class="label">Email</mat-label>
+                  <mat-icon matPrefix>mail</mat-icon>
+                  <input matInput type="email" [(ngModel)]="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="regNo">
+                  <mat-icon matPrefix>smartphone</mat-icon>
+                  <mat-label class="label">Phone</mat-label>
+                  <input matInput type="text" [(ngModel)]="phone">
+                </mat-form-field>
+              </div>
+  
+              <div class="flex">
+                <mat-form-field appearance="outline" class="info">
+                  <mat-icon matPrefix>factory</mat-icon>
+                  <mat-label class="label">Profession</mat-label>
+                  <input matInput type="text" [(ngModel)]="profession">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="info">
+                  <mat-icon matPrefix>school</mat-icon>
+                  <mat-label class="label">Education</mat-label>
+                  <input matInput type="text" [(ngModel)]="education">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="info">
+                  <mat-icon matPrefix>home</mat-icon>
+                  <mat-label class="label">Address</mat-label>
+                  <input matInput type="text" [(ngModel)]="address">
+                </mat-form-field>
+              </div>
+  
+              <div class="flex">
+                <mat-form-field appearance="outline" class="col-8">
+                  <mat-icon matPrefix>villa</mat-icon>
+                  <mat-label class="label">Social Status & Affordability for  Transplantation</mat-label>
+                  <input matInput type="text" [(ngModel)]="socials">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="col-4">
+                  <mat-icon matPrefix>person</mat-icon>
+                  <mat-label class="label">Potential Donor</mat-label>
+                  <input matInput type="text" [(ngModel)]="donor">
+                </mat-form-field>
+              </div>
+      </mat-card-content>
+  
+      <mat-card-actions align="end">
+        <button mat-flat-button color="primary" (click)="addKtp()">Save</button>
+      </mat-card-actions>
+      </mat-card>
+</div>

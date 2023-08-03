@@ -1,0 +1,71 @@
+<p appcustomdirectives>fee-management works!</p>
+<div appcustomdirectives>
+    this is all about custom directives in which
+i will create a folder and that will be imported 
+its color will be red or blue
+</div>
+<div appRenderercustomdirectives>
+    in this div we create an renderer directive because it is better
+    than simple directive.
+
+</div>
+<hr>
+<div *ngIf="isavailable">Show result if true</div>
+<div [ngSwitch]="value">
+    <p *ngSwitchCase=10>number is 10</p>
+    <p *ngSwitchCase=15>number is 15</p>
+    <p *ngSwitchCase=20>number is 20</p>
+    <p *ngSwitchCase=25>number is 25</p>
+    <p *ngSwitchDefault>value is default</p>
+</div>
+<hr>
+<hr>
+  <h3>Two way binding</h3>
+<mat-form-field appearance="fill">
+    <mat-label>here is two way binding</mat-label>
+    <input matInput name="input" [(ngModel)]="about">
+</mat-form-field>
+<div class="container">
+    {{about}}
+</div>
+<hr><hr>
+<br>
+<!-- ----------------------------->
+
+<h3>ReactiveForm, FormGroup, Validations, Dynamically add form control with Add Hobby button</h3>
+       <form  class="form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline">
+            <mat-label>User</mat-label>
+            <input matInput formControlName="username">
+            <!-- <span *ngIf="this.signUpForm.get('username').errors.required">name is required</span> -->
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+        <div>
+            <mat-radio-group name="gender" class="btn" formControlName="gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female" >Female</mat-radio-button>
+            </mat-radio-group>
+              
+        </div>
+        <!-- this is dynamically add form control, FormarrayName etc. code -->
+        <br><br>
+        <div formArrayName="hobbies">
+        <button type="button" color="accent" (click)="onAddHobby()" mat-stroked-button>Add Hobby</button>
+         <div *ngFor="let hobby of hobbyControls; let i = index">
+            <mat-form-field appearance="outline">
+            <input matInput type="text" class="form-control" [formControlName]="i">
+        </mat-form-field>
+         </div>
+         
+        </div>
+
+        <!-- end of this code -->
+        <div>
+          <button mat-raised-button color="primary" class="btn">Add</button>
+        </div>
+            
+    </form>

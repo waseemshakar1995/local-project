@@ -1,0 +1,74 @@
+.title {
+  font-size: 20px;
+}
+.mr {
+  margin-right: 3px;
+}
+  .main{
+    display: flex;
+    justify-content:space-between;
+    width: 99%;
+    margin: 3px 5px 3px 5px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-around;
+    padding: inherit;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+  }
+  .eye-icon{
+    cursor: pointer;
+  }
+  .inputs{
+    width: 400px;
+  }
+  .mat-card-actions {
+    margin: 0px 0px 5px 17px;
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 3px 20px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  // mat-card {
+  //   margin: 5px 0px 5px 0px;
+  // }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    text-indent: initial;
+  }
+  .grid-table {
+    border-radius: 10px;
+
+  }
+  .grid-table thead tr th {
+    height: 30px;
+    padding: 2px 5px;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #D6D6D6;
+    width: auto;
+    display: table-cell;
+    vertical-align: inherit;
+    text-align: left;
+}
+
+.grid-table tbody tr td {
+padding: 2px 5px;
+height: 30px;
+font-weight: 400;
+font-size: 14px;
+display: table-cell;
+vertical-align: inherit;
+background-color: #fff;
+}
+
+  
+  

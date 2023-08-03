@@ -1,0 +1,30 @@
+<div class="container">
+    <form #authForm="ngForm">
+      <mat-card class="mat-card-form">
+        <mat-card-title>
+          Login
+        </mat-card-title>
+  
+        <mat-form-field appearance="outline" class="mat-form-field-input">
+          <mat-icon matPrefix>person</mat-icon>
+          <mat-label>Username</mat-label>
+          <input matInput type="text" placeholder="Email" [(ngModel)]="username" name="username">
+        </mat-form-field><br>
+  
+        <mat-form-field appearance="outline" class="mat-form-field-input">
+          <mat-icon matPrefix>lock</mat-icon>
+          <mat-label class="label">Password</mat-label>
+          <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <mat-card-actions>
+          <button mat-flat-button class="btn" color="accent" (click)="login(authForm)">Sign In</button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>
+  

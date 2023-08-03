@@ -1,0 +1,46 @@
+.mat-form-field-input {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    letter-spacing: normal;
+    width:100%;
+}
+.mat-card-form {
+    width: 40%;
+    border-radius: 3px;
+    margin-left: 350px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.forget-text{
+    color: rgb(4, 119, 83);
+    cursor: pointer;
+}
+.btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+}
+.mat-icon {
+    height: auto;
+}
+.signup-using{
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+    color: rgb(4, 119, 83);
+    text-decoration: none;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mat-card-title {
+    display: block;
+    margin-bottom: 13px;
+    text-align: center;
+}

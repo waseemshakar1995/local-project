@@ -1,0 +1,55 @@
+<div class="main">
+  <div class="first">  <h3>here is form data with API's fetch and get method</h3></div>
+  <div class="second">
+<mat-form-field>
+  <input matInput  placeholder="search" search (keyup)="applyFilter($event)" #input>
+</mat-form-field>
+</div>
+</div>
+
+<div class="mat-elevation-z8 container">
+<table mat-table [dataSource]="data" matSort>
+
+  
+  <ng-container matColumnDef="userId">
+    <th mat-header-cell *matHeaderCellDef> User Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> Title </th>
+    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+
+      
+  <ng-container matColumnDef="completed">
+    <th mat-header-cell *matHeaderCellDef>completed</th>
+    <td mat-cell *matCellDef="let element"> {{element.completed}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="toggle">
+		<th mat-header-cell *matHeaderCellDef>Active</th>
+		<td mat-cell *matCellDef="let element">
+			<mat-slide-toggle [checked]="element.completed" color="primary"></mat-slide-toggle>
+		</td>
+	</ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr *matNoDataRow>
+    <td colspan="4" style=" color: red;">no matching of "{{ input.value }}"</td>
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+               <mat-paginator 
+               [pageSizeOptions]="[10,50,100]"
+               aria-label="Select page">
+
+               </mat-paginator>
+</div>

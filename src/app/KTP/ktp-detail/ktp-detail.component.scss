@@ -1,0 +1,234 @@
+.main-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.btn-height {
+  height: 35px;
+}
+
+.grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-indent: initial;
+}
+
+.grid-table thead tr th {
+  height: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  width: auto;
+  white-space: nowrap;
+  display: table-cell;
+  vertical-align: inherit;
+  text-align: left;
+  padding: 4px;
+  border: 1px solid rgb(208, 208, 208);
+}
+
+.grid-table tbody tr td {
+  padding: 2px 5px;
+  border: 1px solid rgb(208, 208, 208);
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  display: table-cell;
+  vertical-align: inherit;
+  background-color: #fff;
+}
+
+.d-flex {
+  display: flex;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+.grid-table {
+  border-radius: 10px;
+}
+.clinical-table{
+  text-align: left;
+  border-collapse: collapse;
+}
+.clinical-table tr th {
+  padding: 0px 5px 0px 5px;
+    font-size: 13px;
+    width: 350px;
+    font-style: normal;
+    font-weight: 500;
+    border: 1px solid lightgray;
+}
+
+.clinical-table tr td {
+  padding: 0px 4px 0px 4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+}
+.card-subtitle {
+  font-size: 16px;
+  font-weight:500;
+  color: black;
+}
+.mb{
+  margin-bottom: 5px;
+}
+.clinical-main-input {
+  width: 450px;
+}
+.field-dense {
+  width: 100%;
+  margin-top: 0; 
+  height: 60px;
+}
+.width-50-percent {
+  width: 50%;
+}
+
+strong {
+  font-weight: 500;
+}
+.specific-clinical-table{
+  width: min-content;
+  text-align: left;
+  border-collapse: collapse;
+}
+.specific-mat-form-field{
+  width: 175px;
+}
+.specific-clinical-table thead tr th {
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid lightgray;
+    padding: 0px 5px 0px 5px;
+}
+
+.specific-clinical-table tbody tr td {
+  padding: 0px 4px 0px 4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+}
+// hematology table
+.lab-table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+.lab-table thead tr th {
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+.lab-table tbody tr th {
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+.lab-table tbody tr td {
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid lightgray;
+  padding: 5px;
+}
+
+// radiology table
+
+.radiology-table{
+  width: min-content;
+  text-align: left;
+  border-collapse: collapse;
+}
+.specific-mat-form-field-radiology{
+  width: 200px;
+}
+.radiology-table thead tr th {
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid lightgray;
+    padding: 0px 5px 0px 5px;
+}
+
+.radiology-table tbody tr td {
+  padding: 0px 4px 0px 4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+}
+
+//another section of radiology
+.fourcolumn-section{
+  width: 145px;
+}
+.fourcolumn-section thead tr th {
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid lightgray;
+    padding: 0px 5px 0px 5px;
+}
+
+.fourcolumn-section tbody tr td {
+  padding: 0px 4px 0px 4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+}
+
+// two column section
+
+.twocolumn-section{
+  width: 300px;
+}
+.twocolumn-section thead tr th {
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid lightgray;
+    padding: 0px 5px 0px 5px;
+}
+
+.twocolumn-section tbody tr td {
+  padding: 0px 4px 0px 4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+}

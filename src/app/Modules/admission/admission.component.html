@@ -1,0 +1,58 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" [(ngModel)]="userName" name="userName">
+    </mat-form-field>
+    <button mat-stroked-button type="submit" color="accent" (click)="onClick()">Add</button>
+</form>
+
+<div class="list">
+    <h3 style="color: blue">User List</h3>
+</div>
+<hr>
+<button mat-flat-button color="warn" (click)="fillValues()">Fill the values</button><br>
+
+<h2>here is with form Get&Reset, validations, template DrivenForm, one way binding </h2>
+
+<mat-form-field>
+<form #f="ngForm" (ngSubmit)="onFormSumbit()" >
+ 
+    <mat-form-field appearance="outline">
+      <mat-label>userName</mat-label>
+      <input matInput name="username" ngModel>
+      <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" ngModel>
+        <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Gender</mat-label>
+          <mat-select name="gender" ngModel="male">
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+      <input matInput type="password" name="password" ngModel >
+      <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+
+      <button mat-stroked-button color="primary" [disabled]="!f.valid">Submit</button>
+    
+    </form>
+    </mat-form-field>
+
+  <mat-card>
+    <div>User Data</div>
+    <div>UserName: {{user.username}}</div>
+    <div>Email: {{user.email}}</div>
+    <div>Gender: {{user.gender}}</div>
+    <div>Password: {{user.password}}</div>
+  </mat-card>

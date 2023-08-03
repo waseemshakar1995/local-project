@@ -1,0 +1,80 @@
+<div class="container">
+    <mat-card>
+        <div class="heading">
+            
+            <mat-card-title class="title">
+                Patients Visits
+            </mat-card-title>
+            <mat-card-title>
+                <button mat-flat-button color="primary" class="button-style"><span class="material-icons">add</span><a routerLink="/ktp-form" routerLinkActive="active">Add Patient</a></button>
+            </mat-card-title>
+        </div>
+        <mat-card-content class="content">
+
+          <mat-form-field appearance="outline" class="inputs">
+            <mat-label class="label">Reg number</mat-label>
+            <input matInput type="text" [(ngModel)]="regnum" name="regnum">
+          </mat-form-field>       
+          <mat-form-field appearance="outline" class="inputs">
+            <mat-label class="label">Visit number</mat-label>
+            <input matInput type="text" [(ngModel)]="visitnum" name="visitnum">
+          </mat-form-field>
+
+              <mat-form-field appearance="outline" class="inputs">
+                <mat-label>Date Range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input matStartDate matInput placeholder="Start date">
+                  <input matEndDate matInput placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+                <mat-hint>MM/DD/YYYY</mat-hint>
+              </mat-form-field>
+              </mat-card-content>
+
+              <mat-card-actions class="mat-card-actions">
+                <button mat-flat-button class="btn mr" color="primary" (click)="applyFilter()">View</button>
+              </mat-card-actions>
+    </mat-card>
+  </div> 
+
+  <div class="container">
+    <mat-card>
+      <table class="grid-table">
+        <thead>
+          <tr>
+            <th>Visit Number</th>
+            <th>MR Number</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Visit At</th>
+            <th>OPD</th>
+            <th>Doctor</th>
+            <th>View</th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of data">
+            <td>{{ data.visitnum }}</td>
+            <td>{{ data.regnum }}</td>
+            <td>{{ data.patientname }}</td>
+            <td>{{data.pattype}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.visitdate}}</td>
+            <td>{{data.docopdcode}}</td>
+            <td>{{data.docopdname}}</td>
+            <td (click)="onClick(data)"><a routerLinkActive="" ></a><mat-icon color="accent" class="eye-icon">visibility</mat-icon></td>
+
+
+          </tr>
+        </tbody>
+      </table>
+    </mat-card>
+    
+  </div>
+
+       

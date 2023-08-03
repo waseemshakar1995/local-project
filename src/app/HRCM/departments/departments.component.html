@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="col">
+      <h2 class="heading">Department List</h2>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="standard">
+        <mat-label>Search...</mat-label>
+        <input matInput placeholder="Ex. Mia" (keyup)="applyFilter($event)" #input>
+        
+      </mat-form-field>
+      <button mat-flat-button color="primary" class="button-style"><span class="material-icons">add</span>Add Department</button>
+    </div>
+  </div>      
+        
+  <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="userData" matSort >
+  
+            <ng-container matColumnDef="code">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Code </th>
+              <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+  
+              <tr *matNoDataRow>
+                <td colspan="4" style=" color: red;">no matching of "{{ input.value }}"</td>
+              </tr>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            
+          </table>
+          <mat-paginator
+          [pageSizeOptions]="[10, 25, 100]"
+          aria-label="Select page">
+  </mat-paginator>
+  </div>
+  
+  

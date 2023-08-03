@@ -1,0 +1,10 @@
+<div class="container">
+    <app-hostel></app-hostel>
+    <div class="row">
+        <div class="col">
+            <app-report *ngFor="let user of users; let i = index"
+            [id]="i"
+             [user]="user"></app-report>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="main container">
+    <div class="col">
+      <h2 class="heading">KTP Patients</h2>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input matInput placeholder="search" class="input" (keyup)="applyFilter($event)" >
+      </mat-form-field>
+      <button mat-flat-button color="primary" class="button-style"><span class="material-icons">add</span><a routerLink="/ktp-form" routerLinkActive="active">Add Patient</a></button>
+    </div>
+  </div> 
