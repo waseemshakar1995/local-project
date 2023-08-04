@@ -25,7 +25,8 @@ export class PatientVisitsKtpComponent implements OnInit {
   getData(): void {
     const requestData = {
       "fromdate": "2023-07-06T05:00:00.000Z",
-      "todate": "2023-07-07T04:59:53.071Z"
+      "todate": "2023-07-07T04:59:53.071Z",
+      "regnum":"",
     };
 
     this.userDataService.getLtpPatients(requestData)

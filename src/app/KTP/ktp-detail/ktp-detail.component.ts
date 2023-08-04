@@ -13,13 +13,33 @@ import { map } from 'rxjs';
 export class KtpDetailComponent implements OnInit {
   dataList: any;
   panelOpenState = false;
+  selectedData:any = [];
 
   constructor(private route: ActivatedRoute, 
     private userDataService:UserDataService,
     private datePipe: DatePipe) { }
 
   ngOnInit(): void {
+    const requestData = {
+      "fromdate": "2023-07-06T05:00:00.000Z",
+      "todate": "2023-07-07T04:59:53.071Z",
+      "visitnum": "23474",
+      "regnum": "PMIC-245"
+    };
+    this.userDataService.getsingleLtpPatients(requestData)
+      .pipe(map((response: any) => {
+        return response.data[0];
+      }))
+      .subscribe(response => {
+        this.selectedData = {...response,visitdate:this.formatDate(response.visitdate)}
+      });
   }
+  
+  formatDate(date: string): string {
+    const formattedDate = this.datePipe.transform(date, 'M/d/yyyy, h:mm:ss a');
+    return formattedDate || '';
+  }
+  
   hematologyData = [
     { name: 'Hemoglobin (g/dL)', result: '', normalValue: '' },
     { name: 'RBC Morphology', result: '', normalValue: '' },
