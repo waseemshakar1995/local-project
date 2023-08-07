@@ -35,6 +35,8 @@ export class PatientVisitsKtpComponent implements OnInit {
       }))
       .subscribe(response => {
         this.data = response
+        console.log(this.data);
+        
         this.data = response.map((item: any) => ({
           ...item,
           visitdate: this.formatDate(item.visitdate) // Format the date using formatDate method

@@ -43,11 +43,14 @@
 <div class="mt-5 container">
   <mat-card class="p-10">
     <div class="clinical-heading">
-      <mat-card-title class="card-title">Clinical History</mat-card-title>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-title class="card-title">Clinical History</mat-card-title>
+  <mat-card-title><button mat-flat-button color="primary" class="btn" (click)="submit()">Submit</button></mat-card-title>
+</div>
       <mat-card-content>
         <mat-form-field appearance="outline" class="clinical-main-input">
           <mat-label>Reason for requiring Transplantation (mention specific disease)</mat-label>
-          <input type="text" matInput>
+          <input type="text" matInput [(ngModel)]="cHistory">
         </mat-form-field>
       </mat-card-content>
     </div>
@@ -56,7 +59,10 @@
 
 <div class="d-flex container">
   <mat-card class="mr-5 mt-5 mb-5 width-50-percent">
-    <mat-card-subtitle class="card-subtitle">Medical History</mat-card-subtitle>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-subtitle class="card-subtitle">Medical History</mat-card-subtitle>
+  <mat-card-subtitle> <button mat-flat-button class="btn" color="primary">Save</button></mat-card-subtitle>
+</div>
     <mat-card-content>
       <table class="clinical-table">
         <tr>
@@ -95,13 +101,13 @@
         </tr>
       </table>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save</button>
-    </mat-card-actions>
   </mat-card>
 
   <mat-card class="ml-5 mt-5 mb-5 width-50-percent">
-    <mat-card-subtitle class="card-subtitle">Drug History</mat-card-subtitle>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-subtitle class="card-subtitle">Drug History</mat-card-subtitle>
+  <mat-card-subtitle><button mat-flat-button class="btn" color="primary">Save</button></mat-card-subtitle>
+</div>
     <mat-card-content>
       <table class="clinical-table">
         <tr>
@@ -157,9 +163,6 @@
         </tr>
       </table>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save</button>
-    </mat-card-actions>
   </mat-card>
 </div>
 
@@ -167,7 +170,10 @@
 
 <div class="container">
   <mat-card class="mt-5 mb-5">
-    <mat-card-title class="card-title">Specific Clinical History</mat-card-title>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-title class="card-title">Specific Clinical History</mat-card-title>
+  <mat-card-title><button mat-flat-button class="btn" color="primary">Save</button></mat-card-title>
+</div>
     <mat-card-content>
       <table class="specific-clinical-table">
         <thead>
@@ -222,16 +228,16 @@
         </tbody>
       </table>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save</button>
-    </mat-card-actions>
   </mat-card>
 </div>
 
 <!-- NUTRITIONAL STATUS -->
 <div class="d-flex container justify-space-beteen">
   <mat-card class="mr-5 mt-5 mb-5 width-50-percent">
-    <mat-card-subtitle class="card-subtitle">Nutritional Status</mat-card-subtitle>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-subtitle class="card-subtitle">Nutritional Status</mat-card-subtitle>
+  <mat-card-subtitle><button mat-flat-button class="btn" color="primary">Save</button></mat-card-subtitle>
+</div>
     <mat-card-content>
       <table class="clinical-table">
         <tr>
@@ -279,13 +285,13 @@
         </tr>
       </table>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save</button>
-    </mat-card-actions>
   </mat-card>
 
   <mat-card class="ml-5 mt-5 mb-5 width-50-percent">
-    <mat-card-subtitle class="card-subtitle">Nutritional Status</mat-card-subtitle>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-subtitle class="card-subtitle">Nutritional Status</mat-card-subtitle>
+  <mat-card-subtitle><button mat-flat-button class="btn" color="primary">Save</button></mat-card-subtitle>
+</div>
     <mat-card-content>
       <table class="clinical-table">
         <tr>
@@ -316,15 +322,15 @@
         </tr>
       </table>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save</button>
-    </mat-card-actions>
   </mat-card>
 </div>
 <!-- LABORATORY INVESTIGATIONS -->
 <div class="labortory-investigations container">
   <mat-card>
-    <mat-card-title>Labortary Investigations</mat-card-title>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-title>Labortary Investigations</mat-card-title>
+  <mat-card-title><button mat-flat-button class="btn" color="primary">Save Lab Detail</button></mat-card-title>
+</div>
     <mat-card-content>
       <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
         <mat-expansion-panel-header>
@@ -594,9 +600,6 @@
         </table>
       </mat-expansion-panel>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save Lab Detail</button>
-    </mat-card-actions>
   </mat-card>
 </div>
 
@@ -617,9 +620,12 @@
 
 <div class="d-flex container">
   <mat-card class="mr-5 mt-5 mb-5 width-50-percent">
-    <mat-card-subtitle class="card-subtitle">ULTRASOUND ABDOMEN & PELVIS + LIVER
-      DOPPLER ULTRASOUND
-    </mat-card-subtitle>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-subtitle class="card-subtitle">ULTRASOUND ABDOMEN & PELVIS + LIVER
+    DOPPLER ULTRASOUND
+  </mat-card-subtitle>
+  <mat-card-subtitle><button mat-flat-button class="btn" color="primary">Save</button></mat-card-subtitle>
+</div>
     <mat-card-content>
       <table class="clinical-table">
         <tr>
@@ -658,13 +664,13 @@
         </tr>
       </table>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save</button>
-    </mat-card-actions>
   </mat-card>
 
   <mat-card class="ml-5 mt-5 mb-5 width-50-percent">
-    <mat-card-subtitle class="card-subtitle">CT-SCAN TRIPHASIC ABDOMEN</mat-card-subtitle>
+<div class="d-flex" style="justify-content: space-between;">
+  <mat-card-subtitle class="card-subtitle">CT-SCAN TRIPHASIC ABDOMEN</mat-card-subtitle>
+  <mat-card-subtitle> <button mat-flat-button class="btn" color="primary">Save</button></mat-card-subtitle>
+</div>
     <mat-card-content>
       <table class="clinical-table">
         <tr>
@@ -744,9 +750,6 @@
         </tr>
       </table>
     </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-flat-button class="btn" color="primary">Save</button>
-    </mat-card-actions>
   </mat-card>
 </div>
 

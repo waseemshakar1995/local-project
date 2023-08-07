@@ -14,6 +14,7 @@ export class KtpDetailComponent implements OnInit {
   dataList: any;
   panelOpenState = false;
   selectedData:any = [];
+  cHistory:any;
 
   constructor(private route: ActivatedRoute, 
     private userDataService:UserDataService,
@@ -39,7 +40,13 @@ export class KtpDetailComponent implements OnInit {
     const formattedDate = this.datePipe.transform(date, 'M/d/yyyy, h:mm:ss a');
     return formattedDate || '';
   }
+  submit() {
+    console.log(this.cHistory);
+    
+  }
   
+
+  // data['hemotology']['Hemoglobin']
   hematologyData = [
     { name: 'Hemoglobin (g/dL)', result: '', normalValue: '' },
     { name: 'RBC Morphology', result: '', normalValue: '' },
